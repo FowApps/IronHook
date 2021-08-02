@@ -42,5 +42,15 @@ namespace IronHook.Core.Entities
         /// If defined hook exceeded inform email
         /// </summary>
         public string NotifiyEmail { get; set; }
+
+        /// <summary>
+        /// Relation property
+        /// </summary>
+        public virtual Hook Hook { get; set; }
+
+        /// <summary>
+        /// Relation of between HookLogs to HookRequest
+        /// </summary>
+        public virtual ICollection<HookLog> HookLogs { get; set; }
     }
 }
