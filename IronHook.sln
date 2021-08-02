@@ -9,9 +9,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{2550
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{33476735-78DB-4F73-AFDA-448F7D0B81A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronHook.Core", "src\IronHook.Core\IronHook.Core.csproj", "{92BA62A2-B3F9-4897-874A-41C4FA78BF47}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92BA62A2-B3F9-4897-874A-41C4FA78BF47} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44DC5620-2F91-4082-84BB-AA4895AD0037}
