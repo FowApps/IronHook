@@ -25,5 +25,10 @@ namespace IronHook.Core.Entities
         /// Custom Name of Hook
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Relation property
+        /// </summary>
+        public virtual ICollection<HookRequest> HookRequests { get; set; }
     }
 }
