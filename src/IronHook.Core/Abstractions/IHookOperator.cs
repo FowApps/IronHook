@@ -28,6 +28,6 @@ namespace IronHook.Core.Abstractions
         /// <returns>
         /// List Of Hook Response
         /// </returns>
-        Task<IList<HookResponse>> SendHookAsync<T>(Hook hook, T data = default(T));
+        Task<IList<HookResponse>> SendHookAsync<T>(Hook hook, List<HookRequest> requests, T data = default(T));
     }
 }
