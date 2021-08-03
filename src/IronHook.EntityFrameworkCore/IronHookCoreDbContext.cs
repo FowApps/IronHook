@@ -50,6 +50,16 @@ namespace IronHook.EntityFrameworkCore
                     .ValueGeneratedOnAdd();
 
                 entity
+                    .Property(p => p.CreateDate)
+                    .HasValueGenerator<DateTimeGenerator>()
+                    .ValueGeneratedOnAdd();
+
+                entity
+                    .Property(p => p.UpdateDate)
+                    .HasValueGenerator<DateTimeGenerator>()
+                    .ValueGeneratedOnAddOrUpdate();
+
+                entity
                     .Property(p => p.Key)
                     .IsRequired();
 
@@ -76,6 +86,16 @@ namespace IronHook.EntityFrameworkCore
                     .Property(p => p.Id)
                     .HasValueGenerator<GuidGenerator>()
                     .ValueGeneratedOnAdd();
+
+                entity
+                    .Property(p => p.CreateDate)
+                    .HasValueGenerator<DateTimeGenerator>()
+                    .ValueGeneratedOnAdd();
+
+                entity
+                    .Property(p => p.UpdateDate)
+                    .HasValueGenerator<DateTimeGenerator>()
+                    .ValueGeneratedOnAddOrUpdate();
 
                 entity
                     .Property(p => p.Url)
