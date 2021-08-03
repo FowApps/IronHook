@@ -54,7 +54,7 @@ namespace IronHook.Core.Abstractions
         /// <returns>
         /// List of Hook
         /// </returns>
-        Task<IList<Hook>> GetAsync(Expression<Func<Hook, bool>> expression);
+        Task<List<Hook>> GetAsync(Expression<Func<Hook, bool>> expression);
 
 
         /// <summary>
