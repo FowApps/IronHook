@@ -33,6 +33,7 @@ namespace IronHook.PostgreSql.Extensions
             services.AddDbContext<IronHookPostgreSqlDbContext>(options, ServiceLifetime.Transient, ServiceLifetime.Transient);
             services.AddTransient<IIronHookContext>(sp => sp.GetService<IronHookPostgreSqlDbContext>());
             services.AddTransient<IHookService<IronHookPostgreSqlDbContext>, DefaultHookService<IronHookPostgreSqlDbContext>>();
+            services.AddTransient<IHookOperator, HttpHookOperator>();
             return services;
         }
     }
