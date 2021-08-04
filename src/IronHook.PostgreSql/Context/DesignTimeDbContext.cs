@@ -13,7 +13,7 @@ namespace IronHook.PostgreSql.Context
         public IronHookPostgreSqlDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<IronHookPostgreSqlDbContext>();
-            optionsBuilder.UseNpgsql("xxxx");
+            optionsBuilder.UseNpgsql("{YOUR_CONNECTION_STRING}");
             return new IronHookPostgreSqlDbContext(optionsBuilder.Options);
         }
     }
