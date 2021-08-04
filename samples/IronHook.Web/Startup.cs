@@ -41,6 +41,8 @@ namespace IronHook.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseIronHook();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
