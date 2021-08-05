@@ -27,7 +27,11 @@ namespace IronHook.PostgreSql.Extensions
         /// </returns>
         public static IApplicationBuilder UseIronHook(this IApplicationBuilder app)
         {
-            app.ApplicationServices.GetService<IronHookPostgreSqlDbContext>().Database.Migrate();
+            using (var serviceScope = app.ApplicationServices.CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService<IronHookPostgreSqlDbContext>();
+                context.Database.Migrate();
+            }
             return app;
         }
     }
