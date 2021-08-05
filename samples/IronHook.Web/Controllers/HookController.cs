@@ -140,5 +140,22 @@ namespace IronHook.Web.Controllers
             await hookService.AddAsync(hook);
             return Ok(hook);
         }
+
+        /// <summary>
+        /// Delete Hook
+        /// </summary>
+        /// <param name="id">
+        /// PK of Hook entity
+        /// </param>
+        /// <returns>
+        /// NoContent
+        /// </returns>
+        [HttpDelete("{id}", Name = "DeleteHook")]
+        [ProducesResponseType(204)]
+        public async Task<IActionResult> DeleteHookAsync([FromRoute] Guid id)
+        {
+            await hookService.RemoveAsync(hookId: id);
+            return NoContent();
+        }
     }
 }
