@@ -23,7 +23,7 @@ namespace IronHook.Core.Abstractions
         /// <returns>
         /// Task
         /// </returns>
-        Task AddAsync(Hook hook);
+        Task<Hook> AddAsync(Hook hook);
 
         /// <summary>
         /// Update Hook
@@ -34,7 +34,7 @@ namespace IronHook.Core.Abstractions
         /// <returns>
         /// Task
         /// </returns>
-        Task UpdateAsync(Hook hook);
+        Task<Hook> UpdateAsync(Hook hook);
 
         /// <summary>
         /// Remove Hook
