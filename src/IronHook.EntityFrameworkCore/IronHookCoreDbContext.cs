@@ -57,7 +57,7 @@ namespace IronHook.EntityFrameworkCore
                 entity
                     .Property(p => p.UpdateDate)
                     .HasValueGenerator<DateTimeGenerator>()
-                    .ValueGeneratedOnAddOrUpdate();
+                    .ValueGeneratedOnAdd();
 
                 entity
                     .Property(p => p.Key)
@@ -95,7 +95,7 @@ namespace IronHook.EntityFrameworkCore
                 entity
                     .Property(p => p.UpdateDate)
                     .HasValueGenerator<DateTimeGenerator>()
-                    .ValueGeneratedOnAddOrUpdate();
+                    .ValueGeneratedOnAdd();
 
                 entity
                     .Property(p => p.Url)
@@ -139,21 +139,23 @@ namespace IronHook.EntityFrameworkCore
             return Set<T>().AsQueryable();
         }
 
-        public async Task InsertAsync<T>(T entity) where T : class
+        public virtual async Task<T> InsertAsync<T>(T entity) where T : class
         {
             var entry = Entry(entity);
             entry.State = EntityState.Added;
             await SaveChangesAsync();
+            return entry.Entity;
         }
 
-        public async Task UpdateAsync<T>(T entity) where T : class
+        public virtual async Task<T> UpdateAsync<T>(T entity) where T : class
         {
             var entry = Entry(entity);
             entry.State = EntityState.Modified;
             await SaveChangesAsync();
+            return entry.Entity;
         }
 
-        public async Task DeleteAsync<T>(T entity) where T : class
+        public virtual async Task DeleteAsync<T>(T entity) where T : class
         {
             Set<T>().Remove(entity);
             await SaveChangesAsync();
