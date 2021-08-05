@@ -76,5 +76,16 @@ namespace IronHook.Web.Controllers
                 }
             }
         }
+
+        /// <summary>
+        /// Get All
+        /// </summary>
+        /// <returns>
+        /// Array of Hook
+        /// </returns>
+        [HttpGet(Name = "GetAll")]
+        [ProducesResponseType(typeof(Hook[]), 200)]
+        public async Task<IActionResult> GetAllAsync()
+            => Ok(await hookService.GetAsync(a => a.TenantId == "1" && a.IsActive););
     }
 }
