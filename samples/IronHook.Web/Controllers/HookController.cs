@@ -171,13 +171,15 @@ namespace IronHook.Web.Controllers
         /// OkObjectResult(Hook)
         /// </returns>
         [HttpPost("{id}/requests", Name = "AddRequestToHook")]
-        [ProducesResponseType(typeof(Hook), 200)]
+        [ProducesResponseType(typeof(HookRequest), 200)]
         public async Task<IActionResult> AddRequestToHookAsync([FromRoute] Guid id, [FromBody] HookRequestDefineDto model)
         {
             var hook = await hookService.GetAsync(x => x.Id == id && x.TenantId == "1" && x.IsDeleted == false);
             var hookData = hook.FirstOrDefault();
-            hookData.HookRequests.Add(new HookRequest
+
+            var response = await hookService.AddRequestAsync(new HookRequest
             {
+                HookId = hookData.Id,
                 Method = model.Method,
                 Url = model.Url,
                 NotifiyEmail = model.NotifyEmail,
@@ -185,9 +187,7 @@ namespace IronHook.Web.Controllers
                 Headers = JsonSerializer.Serialize(model.HeaderParameters)
             });
 
-            await hookService.UpdateAsync(hookData);
-
-            return Ok(hookData);
+            return Ok(response);
         }
 
         /// <summary>
