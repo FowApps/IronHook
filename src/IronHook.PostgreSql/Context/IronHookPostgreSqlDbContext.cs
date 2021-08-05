@@ -17,7 +17,7 @@ namespace IronHook.PostgreSql.Context
         {
         }
 
-        public IronHookPostgreSqlDbContext(DbContextOptions options) : base(options)
+        public IronHookPostgreSqlDbContext(DbContextOptions<IronHookPostgreSqlDbContext> options) : base(options)
         {
         }
     }
