@@ -35,7 +35,7 @@ namespace IronHook.Core.Abstractions
         /// <returns>
         /// Task
         /// </returns>
-        Task InsertAsync<T>(T entity) where T : class;
+        Task<T> InsertAsync<T>(T entity) where T : class;
 
         /// <summary>
         /// Update Entity
@@ -49,7 +49,7 @@ namespace IronHook.Core.Abstractions
         /// <returns>
         /// Task
         /// </returns>
-        Task UpdateAsync<T>(T entity) where T : class;
+        Task<T> UpdateAsync<T>(T entity) where T : class;
 
         /// <summary>
         /// Delete
