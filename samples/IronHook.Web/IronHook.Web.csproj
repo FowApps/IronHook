@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>63f74f68-04e1-4eae-9e39-cf946ac88d11</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,6 +18,7 @@
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.1.2" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
 			<PrivateAssets>all</PrivateAssets>
