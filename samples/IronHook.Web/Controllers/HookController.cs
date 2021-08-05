@@ -157,5 +157,69 @@ namespace IronHook.Web.Controllers
             await hookService.RemoveAsync(hookId: id);
             return NoContent();
         }
+
+        /// <summary>
+        /// Add Request To Hook
+        /// </summary>
+        /// <param name="id">
+        /// PK of Hook Entity
+        /// </param>
+        /// <param name="model">
+        /// Hook Request Data Transfer Object
+        /// </param>
+        /// <returns>
+        /// OkObjectResult(Hook)
+        /// </returns>
+        [HttpPost("{id}/requests", Name = "AddRequestToHook")]
+        [ProducesResponseType(typeof(Hook), 200)]
+        public async Task<IActionResult> AddRequestToHookAsync([FromRoute] Guid id, [FromBody] HookRequestDefineDto model)
+        {
+            var hook = await hookService.GetAsync(x => x.Id == id && x.TenantId == "1" && x.IsDeleted == false);
+            var hookData = hook.FirstOrDefault();
+            hookData.HookRequests.Add(new HookRequest
+            {
+                Method = model.Method,
+                Url = model.Url,
+                NotifiyEmail = model.NotifyEmail,
+                MaxRetryCount = model.MaxRetryCount,
+                Headers = JsonSerializer.Serialize(model.HeaderParameters)
+            });
+
+            await hookService.UpdateAsync(hookData);
+
+            return Ok(hookData);
+        }
+
+        /// <summary>
+        /// Delete Hook Request
+        /// </summary>
+        /// <param name="id">
+        /// PK of Hook Request Entity
+        /// </param>
+        /// <returns></returns>
+        [HttpDelete("requests/{id}", Name = "DeleteHookRequest")]
+        [ProducesResponseType(204)]
+        public async Task<IActionResult> DeleteHookRequestAsync([FromRoute] Guid id)
+        {
+            await hookService.RemoveRequestAsync(id);
+            return NoContent();
+        }
+
+        /// <summary>
+        /// Get Hook Requests
+        /// </summary>
+        /// <param name="id">
+        /// PK of Hook
+        /// </param>
+        /// <returns>
+        /// List of Hook Request
+        /// </returns>
+        [HttpGet("requests/{id}", Name = "GetRequests")]
+        [ProducesResponseType(typeof(HookRequest[]), 200)]
+        public async Task<IActionResult> GetRequestsAsync([FromRoute] Guid id)
+        {
+            var response = await hookService.GetHookRequestsAsync(id);
+            return Ok(response);
+        }
     }
 }
