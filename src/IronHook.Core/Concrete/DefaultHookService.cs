@@ -20,9 +20,10 @@ namespace IronHook.Core.Concrete
             this.dbContext = dbContext;
             this.hookOperator = hookOperator;
         }
-        public async Task AddAsync(Hook hook)
+        public async Task<Hook> AddAsync(Hook hook)
         {
-            await dbContext.InsertAsync<Hook>(hook);
+            var response = await dbContext.InsertAsync<Hook>(hook);
+            return response;
         }
 
         public Task<Hook> FindHookAsync(string key, string tenantId)
@@ -68,9 +69,10 @@ namespace IronHook.Core.Concrete
             await dbContext.DeleteAsync<HookRequest>(entity);
         }
 
-        public async Task UpdateAsync(Hook hook)
+        public async Task<Hook> UpdateAsync(Hook hook)
         {
-            await dbContext.UpdateAsync<Hook>(hook);
+            var response = await dbContext.UpdateAsync<Hook>(hook);
+            return response;
         }
     }
 }
