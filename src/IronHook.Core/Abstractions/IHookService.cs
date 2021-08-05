@@ -26,6 +26,17 @@ namespace IronHook.Core.Abstractions
         Task<Hook> AddAsync(Hook hook);
 
         /// <summary>
+        /// Add Hook
+        /// </summary>
+        /// <param name="hook">
+        /// Hook Entity
+        /// </param>
+        /// <returns>
+        /// Task
+        /// </returns>
+        Task<HookRequest> AddRequestAsync(HookRequest request);
+
+        /// <summary>
         /// Update Hook
         /// </summary>
         /// <param name="hook">
