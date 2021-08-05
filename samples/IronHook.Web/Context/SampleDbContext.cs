@@ -45,8 +45,8 @@ namespace IronHook.Web.Context
 
                 entity
                     .Property(p => p.UpdateDate)
-                    .HasValueGenerator<GuidGenerator>()
-                    .ValueGeneratedOnAddOrUpdate();
+                    .HasValueGenerator<DateTimeValueGenerator>()
+                    .ValueGeneratedOnAdd();
             });
         }
 
