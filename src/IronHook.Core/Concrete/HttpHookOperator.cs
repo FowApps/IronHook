@@ -74,7 +74,10 @@ namespace IronHook.Core.Concrete
                             ResponseDate = responseDate,
                         });
 
-                        if (!isExceeded)
+                        if (response.IsSuccessStatusCode)
+                            return responses;
+
+                        else if (!isExceeded)
                             goto Loop;
                     }
                 }
