@@ -29,10 +29,5 @@ namespace IronHook.Web
         /// Customer Delete Event
         /// </summary>
         public static string CUSTOMER_DELETED { get => "customer.deleted"; }
-
-        /// <summary>
-        /// Customer Read Event
-        /// </summary>
-        public static string CUSTOMER_READED { get => "customer.readed"; }
     }
 }
