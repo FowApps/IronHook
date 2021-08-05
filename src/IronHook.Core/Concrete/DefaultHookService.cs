@@ -23,7 +23,17 @@ namespace IronHook.Core.Concrete
         public async Task<Hook> AddAsync(Hook hook)
         {
             var response = await dbContext.InsertAsync<Hook>(hook);
+            foreach (var request in hook.HookRequests.ToList())
+            {
+                request.HookId = response.Id;
+                await dbContext.InsertAsync<HookRequest>(request);
+            }
             return response;
+        }
+
+        public async Task<HookRequest> AddRequestAsync(HookRequest request)
+        {
+            return await dbContext.InsertAsync<HookRequest>(request);
         }
 
         public Task<Hook> FindHookAsync(string key, string tenantId)
