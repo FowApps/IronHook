@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace IronHook.Web.Controllers
@@ -101,5 +102,43 @@ namespace IronHook.Web.Controllers
         [ProducesResponseType(typeof(Hook), 200)]
         public async Task<IActionResult> FindAsync([FromRoute] Guid id)
             => Ok(await hookService.GetAsync(a => a.Id == id && a.TenantId == "1" && a.IsActive));
+
+        /// <summary>
+        /// Define Hook
+        /// </summary>
+        /// <param name="name">
+        /// Event Name
+        /// </param>
+        /// <param name="model">
+        /// Hook Data Transfer Object
+        /// </param>
+        /// <returns>
+        /// Hook Entity
+        /// </returns>
+        [HttpPost("events/{name}", Name = "DefineHook")]
+        [ProducesResponseType(typeof(Hook), 200)]
+        public async Task<IActionResult> DefineHookAsync([FromRoute] string name, [FromBody] HookDto model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var hook = new Hook
+            {
+                TenantId = "1",
+                Key = name,
+                HookRequests = model.HookRequests.Select(s => new HookRequest
+                {
+                    Url = model.HookRequests.FirstOrDefault().Url,
+                    Method = model.HookRequests.FirstOrDefault().Method,
+                    Headers = JsonSerializer.Serialize(model.HookRequests.FirstOrDefault().HeaderParameters),
+                    MaxRetryCount = model.HookRequests.FirstOrDefault().MaxRetryCount,
+                    NotifiyEmail = model.HookRequests.FirstOrDefault()?.NotifyEmail
+                }).ToList(),
+                IsActive = model.IsActive,
+                Name = model.Name
+            };
+            await hookService.AddAsync(hook);
+            return Ok(hook);
+        }
     }
 }
