@@ -87,5 +87,19 @@ namespace IronHook.Web.Controllers
         [ProducesResponseType(typeof(Hook[]), 200)]
         public async Task<IActionResult> GetAllAsync()
             => Ok(await hookService.GetAsync(a => a.TenantId == "1" && a.IsActive));
+
+        /// <summary>
+        /// Find
+        /// </summary>
+        /// <param name="id">
+        /// PK of Hook
+        /// </param>
+        /// <returns>
+        /// Hook Entity
+        /// </returns>
+        [HttpGet("{id}", Name = "Find")]
+        [ProducesResponseType(typeof(Hook), 200)]
+        public async Task<IActionResult> FindAsync([FromRoute] Guid id)
+            => Ok(await hookService.GetAsync(a => a.Id == id && a.TenantId == "1" && a.IsActive));
     }
 }
