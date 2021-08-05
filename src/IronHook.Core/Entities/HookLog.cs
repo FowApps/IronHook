@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace IronHook.Core.Entities
@@ -44,6 +45,7 @@ namespace IronHook.Core.Entities
         /// <summary>
         /// Relation of between HookLog to HookRequest
         /// </summary>
+        [JsonIgnore]
         public virtual HookRequest HookRequest { get; set; }
     }
 }

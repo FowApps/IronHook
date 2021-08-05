@@ -48,6 +48,12 @@ namespace IronHook.Core.Concrete
             return Task.FromResult(response);
         }
 
+        public Task<List<HookLog>> GetHookLogsAsync(Guid hookRequestId)
+        {
+            var response = dbContext.Get<HookLog>().Where(a => a.RequestId == hookRequestId).ToList();
+            return Task.FromResult(response);
+        }
+
         public Task<List<HookRequest>> GetHookRequestsAsync(Guid hookId)
         {
             var response = dbContext.Get<HookRequest>().Where(a => a.HookId == hookId).ToList();

@@ -106,5 +106,16 @@ namespace IronHook.Core.Abstractions
         /// List of Hook Request
         /// </returns>
         Task<List<HookRequest>> GetHookRequestsAsync(Guid hookId);
+
+        /// <summary>
+        /// Get Hook Logs
+        /// </summary>
+        /// <param name="hookRequestId">
+        /// PK of Hook Request
+        /// </param>
+        /// <returns>
+        /// List of HookLog
+        /// </returns>
+        Task<List<HookLog>> GetHookLogsAsync(Guid hookRequestId);
     }
 }
