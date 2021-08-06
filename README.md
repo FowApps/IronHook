@@ -6,4 +6,38 @@
   IronHook
 </h1>
 
+
+<p align="center">
+  <a href="https://gitmoji.carloscuesta.me">
+    <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+  </a> 
+</p>
+
+
+***
+
+## Give a Star 🌟
+If you liked the project or if **EasyProfiler** helped you, please give a star.
+
+***
+
+## Purpose
 This repo provides easily management hook operations of for dotnet application.
+
+***
+
+### Supported Databases
+- PostgreSql
+
+### Planned Databases
+- Sql Server
+- MariaDb
+- MySql
+- SQLite
+- Mongo
+
+***
+
+### Demo
+Visit [Live Demo](https://iron-hook.herokuapp.com) for sample project.
+
