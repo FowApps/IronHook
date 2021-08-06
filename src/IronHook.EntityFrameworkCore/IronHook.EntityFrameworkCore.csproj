@@ -1,16 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<Import Project="..\..\common.props" />
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.8" />
-  </ItemGroup>
+	<PropertyGroup>
+		<PackageId>IronHook.EntityFrameworkCore</PackageId>
+		<PackageIcon>anchor.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\IronHook.Core\IronHook.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\IronHook.Core\IronHook.Core.csproj" />
+	</ItemGroup>
 
 </Project>
