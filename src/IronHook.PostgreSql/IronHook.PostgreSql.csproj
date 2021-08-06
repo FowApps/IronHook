@@ -1,10 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<Import Project="..\..\common.props" />
 
-  <ItemGroup>
+	<PropertyGroup>
+		<PackageId>IronHook.PostgreSql</PackageId>
+		<PackageIcon>anchor.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
