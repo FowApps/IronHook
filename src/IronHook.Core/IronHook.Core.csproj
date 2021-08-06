@@ -6,6 +6,7 @@
 	<PropertyGroup>
 		<PackageId>IronHook.Core</PackageId>
 		<PackageIcon>anchor.png</PackageIcon>
+		<Company>fowapps</Company>
 	</PropertyGroup>
 	
   <ItemGroup>

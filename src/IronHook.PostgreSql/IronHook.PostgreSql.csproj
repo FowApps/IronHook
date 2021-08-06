@@ -5,6 +5,8 @@
 	<PropertyGroup>
 		<PackageId>IronHook.PostgreSql</PackageId>
 		<PackageIcon>anchor.png</PackageIcon>
+		<Company>fowapps</Company>
+		<PackageIconUrl />
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -17,6 +19,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="anchor.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
