@@ -17,7 +17,7 @@
 ***
 
 ## Give a Star 🌟
-If you liked the project or if **EasyProfiler** helped you, please give a star.
+If you liked the project or if **IronHook** helped you, please give a star.
 
 ***
 
