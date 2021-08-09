@@ -20,7 +20,7 @@ namespace IronHook.Core.Concrete
         {
             this.ironHookContext = ironHookContext;
         }
-        public async Task<IList<HookResponse>> SendHookAsync<T>(Hook hook, List<HookRequest> requests, T data = default)
+        public virtual async Task<IList<HookResponse>> SendHookAsync<T>(Hook hook, List<HookRequest> requests, T data = default)
         {
             var responses = new List<HookResponse>();
             int errorCount = 0;

@@ -20,7 +20,7 @@ namespace IronHook.Core.Concrete
             this.dbContext = dbContext;
             this.hookOperator = hookOperator;
         }
-        public async Task<Hook> AddAsync(Hook hook)
+        public virtual async Task<Hook> AddAsync(Hook hook)
         {
             var response = await dbContext.InsertAsync<Hook>(hook);
             foreach (var request in hook.HookRequests.ToList())
@@ -31,36 +31,36 @@ namespace IronHook.Core.Concrete
             return response;
         }
 
-        public async Task<HookRequest> AddRequestAsync(HookRequest request)
+        public virtual async Task<HookRequest> AddRequestAsync(HookRequest request)
         {
             return await dbContext.InsertAsync<HookRequest>(request);
         }
 
-        public Task<Hook> FindHookAsync(string key, string tenantId)
+        public virtual Task<Hook> FindHookAsync(string key, string tenantId)
         {
             var response = dbContext.Get<Hook>().FirstOrDefault(a => a.Key == key && a.TenantId == tenantId);
             return Task.FromResult(response);
         }
 
-        public Task<List<Hook>> GetAsync(Expression<Func<Hook, bool>> expression)
+        public virtual Task<List<Hook>> GetAsync(Expression<Func<Hook, bool>> expression)
         {
             var response = dbContext.Get<Hook>().Where(expression).ToList();
             return Task.FromResult(response);
         }
 
-        public Task<List<HookLog>> GetHookLogsAsync(Guid hookRequestId)
+        public virtual Task<List<HookLog>> GetHookLogsAsync(Guid hookRequestId)
         {
             var response = dbContext.Get<HookLog>().Where(a => a.RequestId == hookRequestId).ToList();
             return Task.FromResult(response);
         }
 
-        public Task<List<HookRequest>> GetHookRequestsAsync(Guid hookId)
+        public virtual Task<List<HookRequest>> GetHookRequestsAsync(Guid hookId)
         {
             var response = dbContext.Get<HookRequest>().Where(a => a.HookId == hookId).ToList();
             return Task.FromResult(response);
         }
 
-        public async Task<IList<HookResponse>> RaiseHookAsync(string key, string tenantId, object data)
+        public virtual async Task<IList<HookResponse>> RaiseHookAsync(string key, string tenantId, object data)
         {
             var hooks = dbContext.Get<Hook>().Where(a => a.Key == key && a.TenantId == tenantId && a.IsActive && !a.IsDeleted).ToList();
             var requests = dbContext.Get<HookRequest>().Where(a => hooks.Select(s => s.Id).ToList().Contains(a.HookId)).ToList();
@@ -73,19 +73,19 @@ namespace IronHook.Core.Concrete
             return responses;
         }
 
-        public async Task RemoveAsync(Guid hookId)
+        public virtual async Task RemoveAsync(Guid hookId)
         {
             var entities = await GetAsync(a => a.Id == hookId);
             await dbContext.DeleteAsync<Hook>(entities.FirstOrDefault());
         }
 
-        public async Task RemoveRequestAsync(Guid hookRequestId)
+        public virtual async Task RemoveRequestAsync(Guid hookRequestId)
         {
             var entity = dbContext.Get<HookRequest>().FirstOrDefault(a => a.Id == hookRequestId);
             await dbContext.DeleteAsync<HookRequest>(entity);
         }
 
-        public async Task<Hook> UpdateAsync(Hook hook)
+        public virtual async Task<Hook> UpdateAsync(Hook hook)
         {
             var response = await dbContext.UpdateAsync<Hook>(hook);
             return response;
