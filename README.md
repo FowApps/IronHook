@@ -1,7 +1,4 @@
 <p align="center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <img src="https://user-images.githubusercontent.com/47147484/128352170-b664f36c-b8b7-44bc-82ba-2584749ce07f.png" style="max-width:100%;" height="140" />
 </p>
 
