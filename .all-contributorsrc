@@ -15,6 +15,17 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "ferhatozlu",
+      "name": "Ferhat Özlü",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4699094?v=4",
+      "profile": "https://github.com/ferhatozlu",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
