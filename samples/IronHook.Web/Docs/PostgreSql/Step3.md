@@ -51,7 +51,3 @@ var hook = new Hook
 await hookService.AddAsync(hook);
 
 ```
-
-### Swagger SS
-
-![image](https://user-images.githubusercontent.com/47147484/128686323-2bbb74a7-4669-40bc-9ca0-a2411d19b28b.png)
