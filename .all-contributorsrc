@@ -26,6 +26,17 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "sercanuste",
+      "name": "Sercan Üste",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5119317?v=4",
+      "profile": "https://sercanuste.com",
+      "contributions": [
+        "doc",
+        "design",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
