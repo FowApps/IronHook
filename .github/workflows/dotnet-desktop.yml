@@ -1,0 +1,26 @@
+name: Test & publish code coverage
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+      - run: dotnet tool install --global dotnet-reportgenerator-globaltool
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build
+      - name: Test with the dotnet CLI
+        run: dotnet test --collect:"XPlat Code Coverage" --results-directory ./TestResult
+      - run: reportgenerator -reports:./TestResult/*/coverage.cobertura.xml -targetdir:coverage -reporttypes:lcov
+      - uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID__IRON_HOOK }}
