@@ -26,13 +26,16 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-	  <None Update="Docs\PostgreSql\Define Hook.md">
+	  <None Update="Docs\PostgreSql\Step3.md">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Docs\PostgreSql\Install.md">
+	  <None Update="Docs\PostgreSql\Step1.md">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Docs\PostgreSql\Startup Configuration.md">
+	  <None Update="Docs\PostgreSql\Step2.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Docs\PostgreSql\Step4.md">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="Docs\README.md">
