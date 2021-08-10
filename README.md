@@ -14,6 +14,14 @@
 </p>
 
 
+| Source     | Badges                |
+| :------- | :------------------------- |
+| `Code Quality` | [![Maintainability](https://api.codeclimate.com/v1/badges/488c665bd42410a26780/maintainability)](https://codeclimate.com/github/FowApps/IronHook/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/488c665bd42410a26780/test_coverage)](https://codeclimate.com/github/FowApps/IronHook/test_coverage)|
+| `Stats For PostgreSQL` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.PostgreSql?label=PostgreSQL%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.PostgreSql?label=PostgreSQL) |
+| `Stats For Core` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.Core?label=IronHook.Core%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.Core?label=IronHook.Core) |
+| `Stats For EF-Core` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore) |
+| `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  |
+
 ***
 
 ## Give a Star 🌟
