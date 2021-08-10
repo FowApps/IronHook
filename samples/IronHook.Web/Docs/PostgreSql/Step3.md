@@ -1,4 +1,4 @@
-﻿## Usage
+﻿## Define Hook
 Get `IHookService<IronHookPostgreSqlDbContext>` from Dependency Injection.
 
 ### Add Hook

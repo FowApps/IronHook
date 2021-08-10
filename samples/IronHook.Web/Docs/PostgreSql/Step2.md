@@ -1,4 +1,4 @@
-﻿## Usage
+﻿## Startup Configuration
 
 Initalize `Startup` configuration.
 

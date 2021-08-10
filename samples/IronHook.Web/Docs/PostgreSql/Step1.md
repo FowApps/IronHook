@@ -1,4 +1,4 @@
-﻿## Usage
+﻿## Install
 
 Iron Hook 2 works with basic BCL.
 
