@@ -7,6 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
+COPY common.props ./
 COPY ["samples/IronHook.Web/IronHook.Web.csproj", "samples/IronHook.Web/"]
 COPY ["src/IronHook.PostgreSql/IronHook.PostgreSql.csproj", "src/IronHook.PostgreSql/"]
 COPY ["src/IronHook.EntityFrameworkCore/IronHook.EntityFrameworkCore.csproj", "src/IronHook.EntityFrameworkCore/"]
