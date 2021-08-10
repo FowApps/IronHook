@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/FowApps/IronHook/raw/master/.github/fow.opensource.png" style="max-width:100%;" height="100" />
-</p>
-
 <h1 align="center" style="max-width:100%; color: #2b2301;" height="140" >
   IronHook
 </h1>
@@ -47,6 +43,32 @@ This repo provides easily management hook operations of for dotnet application.
 - MySql
 - SQLite
 - Mongo
+
+***
+
+### Getting Started
+Install `IronHook.PostgreSql` from [Nuget Package](https://www.nuget.org/packages/IronHook.PostgreSql)
+
+Initalize `Startup` configuration.
+
+```csharp
+services.AddIronHook(options =>
+{
+   options.UseNpgsql(Configuration.GetConnectionString("{YOUR_CONNECTION_STRING}"));
+});
+```
+
+after
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+  app.UseIronHook();
+  // ...
+}
+```
+
+Now you can start hook operations.
 
 ***
 
