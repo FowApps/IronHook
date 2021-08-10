@@ -21,6 +21,9 @@
 | `Stats For Core` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.Core?label=IronHook.Core%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.Core?label=IronHook.Core) |
 | `Stats For EF-Core` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore) |
 | `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  |
+| `CI` | [![.NET](https://github.com/FowApps/IronHook/actions/workflows/dotnet.yml/badge.svg)](https://github.com/FowApps/IronHook/actions/workflows/dotnet.yml)  |
+| `Languages` | ![GitHub top language](https://img.shields.io/github/languages/top/FowApps/IronHook) |
+| `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/FowApps/IronHook) ![GitHub contributors](https://img.shields.io/github/contributors/FowApps/IronHook) ![GitHub last commit](https://img.shields.io/github/last-commit/FowApps/IronHook) ![GitHub search hit counter](https://img.shields.io/github/search/furkandeveloper/FowApps/IronHook) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FowApps/IronHook) ![GitHub repo size](https://img.shields.io/github/repo-size/FowApps/IronHook)|
 
 ***
 
