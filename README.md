@@ -23,7 +23,8 @@
 | `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  |
 | `CI` | [![.NET](https://github.com/FowApps/IronHook/actions/workflows/dotnet.yml/badge.svg)](https://github.com/FowApps/IronHook/actions/workflows/dotnet.yml)  |
 | `Languages` | ![GitHub top language](https://img.shields.io/github/languages/top/FowApps/IronHook) |
-| `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/FowApps/IronHook) ![GitHub contributors](https://img.shields.io/github/contributors/FowApps/IronHook) ![GitHub last commit](https://img.shields.io/github/last-commit/FowApps/IronHook) ![GitHub search hit counter](https://img.shields.io/github/search/furkandeveloper/FowApps/IronHook) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FowApps/IronHook) ![GitHub repo size](https://img.shields.io/github/repo-size/FowApps/IronHook)|
+| `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/FowApps/IronHook) ![GitHub contributors](https://img.shields.io/github/contributors/FowApps/IronHook) ![GitHub last commit](https://img.shields.io/github/last-commit/FowApps/IronHook) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FowApps/IronHook) ![GitHub repo size](https://img.shields.io/github/repo-size/FowApps/IronHook)|
+| `Issue Tracking` | ![GitHub issues](https://img.shields.io/github/issues/FowApps/IronHook) ![GitHub closed issues](https://img.shields.io/github/issues-closed/FowApps/IronHook) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/FowApps/IronHook) ![GitHub pull requests](https://img.shields.io/github/issues-pr/FowApps/IronHook) |
 
 ***
 
