@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/47147484/128352170-b664f36c-b8b7-44bc-82ba-2584749ce07f.png" style="max-width:100%;" height="140" />
+  <img src="https://github.com/FowApps/IronHook/raw/master/.github/fow.opensource.png" style="max-width:100%;" height="100" />
 </p>
 
 <h1 align="center" style="max-width:100%; color: #2b2301;" height="140" >
@@ -17,14 +17,14 @@
 | Source     | Badges                |
 | :------- | :------------------------- |
 | `Code Quality` | [![Maintainability](https://api.codeclimate.com/v1/badges/488c665bd42410a26780/maintainability)](https://codeclimate.com/github/FowApps/IronHook/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/488c665bd42410a26780/test_coverage)](https://codeclimate.com/github/FowApps/IronHook/test_coverage)|
-| `Stats For PostgreSQL` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.PostgreSql?label=PostgreSQL%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.PostgreSql?label=PostgreSQL) |
-| `Stats For Core` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.Core?label=IronHook.Core%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.Core?label=IronHook.Core) |
-| `Stats For EF-Core` | ![Nuget](https://img.shields.io/nuget/dt/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore%20Downloads) ![Nuget](https://img.shields.io/nuget/v/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore) |
+| `Stats For PostgreSQL` | [![Nuget](https://img.shields.io/nuget/dt/IronHook.PostgreSql?label=IronHook.PostgreSql%20Downloads)](https://www.nuget.org/packages/IronHook.PostgreSql/) [![Nuget](https://img.shields.io/nuget/v/IronHook.PostgreSql?label=IronHook.PostgreSql)](https://www.nuget.org/packages/IronHook.PostgreSql/) |
+| `Stats For Core` | [![Nuget](https://img.shields.io/nuget/dt/IronHook.Core?label=IronHook.Core%20Downloads)](https://www.nuget.org/packages/IronHook.Core/) [![Nuget](https://img.shields.io/nuget/v/IronHook.Core?label=IronHook.Core)](https://www.nuget.org/packages/IronHook.Core/) |
+| `Stats For EF-Core` | [![Nuget](https://img.shields.io/nuget/dt/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore%20Downloads)](https://www.nuget.org/packages/IronHook.EntityFrameworkCore/) [![Nuget](https://img.shields.io/nuget/v/IronHook.EntityFrameworkCore?label=IronHook.EntityFrameworkCore)](https://www.nuget.org/packages/IronHook.EntityFrameworkCore/) |
 | `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  |
 | `CI` | [![.NET](https://github.com/FowApps/IronHook/actions/workflows/dotnet.yml/badge.svg)](https://github.com/FowApps/IronHook/actions/workflows/dotnet.yml)  |
-| `Languages` | ![GitHub top language](https://img.shields.io/github/languages/top/FowApps/IronHook) |
-| `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/FowApps/IronHook) ![GitHub contributors](https://img.shields.io/github/contributors/FowApps/IronHook) ![GitHub last commit](https://img.shields.io/github/last-commit/FowApps/IronHook) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FowApps/IronHook) ![GitHub repo size](https://img.shields.io/github/repo-size/FowApps/IronHook)|
-| `Issue Tracking` | ![GitHub issues](https://img.shields.io/github/issues/FowApps/IronHook) ![GitHub closed issues](https://img.shields.io/github/issues-closed/FowApps/IronHook) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/FowApps/IronHook) ![GitHub pull requests](https://img.shields.io/github/issues-pr/FowApps/IronHook) |
+| `Languages` | [![GitHub top language](https://img.shields.io/github/languages/top/FowApps/IronHook)](https://github.com/FowApps/IronHook/) |
+| `Github Activity` | [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/FowApps/IronHook)](https://github.com/FowApps/IronHook/graphs/commit-activity) [![GitHub contributors](https://img.shields.io/github/contributors/FowApps/IronHook)](https://github.com/FowApps/IronHook/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/FowApps/IronHook)](https://github.com/FowApps/IronHook/graphs/commit-activity) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FowApps/IronHook)](https://github.com/FowApps/IronHook/) [![GitHub repo size](https://img.shields.io/github/repo-size/FowApps/IronHook)](https://github.com/FowApps/IronHook/) |
+| `Issue Tracking` | [![GitHub issues](https://img.shields.io/github/issues/FowApps/IronHook)](https://github.com/FowApps/IronHook/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/FowApps/IronHook)](https://github.com/FowApps/IronHook/issues?q=is%3Aissue+is%3Aclosed) [![GitHub pull requests](https://img.shields.io/github/issues-pr/FowApps/IronHook)](https://github.com/FowApps/IronHook/pulls) [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/FowApps/IronHook)](https://github.com/FowApps/IronHook/pulls?q=is%3Apr+is%3Aclosed) |
 
 ***
 
