@@ -26,6 +26,9 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
+	  <None Update="Docs\PostgreSql\Define Hook.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="Docs\PostgreSql\Install.md">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
