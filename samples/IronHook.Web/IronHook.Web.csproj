@@ -17,13 +17,30 @@
     <ProjectReference Include="..\..\src\IronHook.PostgreSql\IronHook.PostgreSql.csproj" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.1.2" />
+		<PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.3.0" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Docs\PostgreSql\Step3.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Docs\PostgreSql\Step1.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Docs\PostgreSql\Step2.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Docs\PostgreSql\Step4.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Docs\README.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>

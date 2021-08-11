@@ -1,0 +1,7 @@
+{
+  "project": {
+    "name": "Iron Hook",
+    "description": "This repository provides easily management hook operations of for dotnet application.",
+    "version": "1.0.0"
+  }
+}

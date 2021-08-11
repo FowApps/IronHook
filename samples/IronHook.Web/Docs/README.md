@@ -1,3 +1,7 @@
+﻿<p align="center">
+  <img src="https://github.com/FowApps/IronHook/raw/master/.github/fow.opensource.png" style="max-width:100%;" height="100" />
+</p>
+
 <h1 align="center" style="max-width:100%; color: #2b2301;" height="140" >
   IronHook
 </h1>
@@ -24,6 +28,11 @@
 
 ***
 
+## Give a Star 🌟
+If you liked the project or if **IronHook** helped you, please give a star.
+
+***
+
 ## Purpose
 This repo provides easily management hook operations of for dotnet application.
 
@@ -38,32 +47,6 @@ This repo provides easily management hook operations of for dotnet application.
 - MySql
 - SQLite
 - Mongo
-
-***
-
-### Getting Started
-Install `IronHook.PostgreSql` from [Nuget Package](https://www.nuget.org/packages/IronHook.PostgreSql)
-
-Initalize `Startup` configuration.
-
-```csharp
-services.AddIronHook(options =>
-{
-   options.UseNpgsql(Configuration.GetConnectionString("{YOUR_CONNECTION_STRING}"));
-});
-```
-
-after
-
-```csharp
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-  app.UseIronHook();
-  // ...
-}
-```
-
-Now you can start hook operations.
 
 ***
 
@@ -87,7 +70,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://furkangungor.krawl.me/"><img src="https://avatars.githubusercontent.com/u/47147484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Furkan Güngör</b></sub></a><br /><a href="#infra-furkandeveloper" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/FowApps/IronHook/commits?author=furkandeveloper" title="Tests">⚠️</a> <a href="https://github.com/FowApps/IronHook/commits?author=furkandeveloper" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ferhatozlu"><img src="https://avatars.githubusercontent.com/u/4699094?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ferhat Özlü</b></sub></a><br /><a href="#infra-ferhatozlu" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/FowApps/IronHook/commits?author=ferhatozlu" title="Tests">⚠️</a> <a href="https://github.com/FowApps/IronHook/commits?author=ferhatozlu" title="Code">💻</a></td>
-    <td align="center"><a href="https://sercanuste.com"><img src="https://avatars.githubusercontent.com/u/5119317?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sercan Üste</b></sub></a><br /><a href="https://github.com/FowApps/IronHook/commits?author=sercanuste" title="Documentation">📖</a> <a href="#design-sercanuste" title="Design">🎨</a> <a href="#example-sercanuste" title="Examples">💡</a></td>
   </tr>
 </table>
 
