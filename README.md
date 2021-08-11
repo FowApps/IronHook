@@ -24,11 +24,6 @@
 
 ***
 
-## Give a Star 🌟
-If you liked the project or if **IronHook** helped you, please give a star.
-
-***
-
 ## Purpose
 This repo provides easily management hook operations of for dotnet application.
 
