@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace IronHook.SqlServer.Context
 {
+    /// <summary>
+    /// Iron Hook Sql Server DbContext
+    /// </summary>
     public class IronHookSqlServerDbContext : IronHookCoreDbContext
     {
         public IronHookSqlServerDbContext()
