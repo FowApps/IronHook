@@ -16,4 +16,8 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj" />
+	</ItemGroup>
+
 </Project>
