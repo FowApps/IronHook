@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\common.props" />
 
 	<PropertyGroup>
@@ -18,6 +18,13 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="anchor.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
