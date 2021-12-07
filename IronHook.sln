@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.223
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}"
 EndProject
@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.Core", "src\IronHo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.EntityFrameworkCore", "src\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj", "{1EE36765-D6E8-452E-B4A2-DC7157EF16D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.PostgreSql", "src\IronHook.PostgreSql\IronHook.PostgreSql.csproj", "{C7DF96DD-4046-425E-895D-295E66741FE6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.Web", "samples\IronHook.Web\IronHook.Web.csproj", "{DFF10173-23A6-4E76-88AE-0E6900236607}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{228129FA-C2BF-4B64-8B5F-E7DC3B6A2CA8}"
@@ -23,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		common.props = common.props
 		Dockerfile = Dockerfile
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronHook.EntityFrameworkCore.SqlServer", "src\IronHook.EntityFrameworkCore.SqlServer\IronHook.EntityFrameworkCore.SqlServer.csproj", "{19CB6A33-941C-41BC-94A9-5E254F68A787}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.EntityFrameworkCore.PostgreSql", "src\IronHook.EntityFrameworkCore.PostgreSql\IronHook.EntityFrameworkCore.PostgreSql.csproj", "{7DB75589-C32C-42E7-B4B5-E140DB21082A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,14 +40,18 @@ Global
 		{1EE36765-D6E8-452E-B4A2-DC7157EF16D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EE36765-D6E8-452E-B4A2-DC7157EF16D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EE36765-D6E8-452E-B4A2-DC7157EF16D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7DF96DD-4046-425E-895D-295E66741FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7DF96DD-4046-425E-895D-295E66741FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7DF96DD-4046-425E-895D-295E66741FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7DF96DD-4046-425E-895D-295E66741FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFF10173-23A6-4E76-88AE-0E6900236607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFF10173-23A6-4E76-88AE-0E6900236607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFF10173-23A6-4E76-88AE-0E6900236607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFF10173-23A6-4E76-88AE-0E6900236607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB75589-C32C-42E7-B4B5-E140DB21082A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB75589-C32C-42E7-B4B5-E140DB21082A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB75589-C32C-42E7-B4B5-E140DB21082A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB75589-C32C-42E7-B4B5-E140DB21082A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,8 +59,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{92BA62A2-B3F9-4897-874A-41C4FA78BF47} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
 		{1EE36765-D6E8-452E-B4A2-DC7157EF16D2} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
-		{C7DF96DD-4046-425E-895D-295E66741FE6} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
 		{DFF10173-23A6-4E76-88AE-0E6900236607} = {2550698D-C602-4592-8DEF-C15AF6C6E46F}
+		{19CB6A33-941C-41BC-94A9-5E254F68A787} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
+		{7DB75589-C32C-42E7-B4B5-E140DB21082A} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44DC5620-2F91-4082-84BB-AA4895AD0037}
