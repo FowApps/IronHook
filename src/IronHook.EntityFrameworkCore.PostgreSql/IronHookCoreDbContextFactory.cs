@@ -1,5 +1,5 @@
 ﻿using IronHook.EntityFrameworkCore;
-using IronHook.PostgreSql.Extensions;
+using IronHook.EntityFrameworkCore.PostgreSql.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;

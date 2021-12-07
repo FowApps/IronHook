@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using IronHook.PostgreSql;
+using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
-namespace IronHook.PostgreSql.Extensions
+namespace IronHook.EntityFrameworkCore.PostgreSql.Extensions
 {
     public static class DbContextBuilderExtensions
     {
