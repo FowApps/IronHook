@@ -42,14 +42,17 @@ This repo provides easily management hook operations of for dotnet application.
 ***
 
 ### Getting Started
-Install `IronHook.PostgreSql` from [Nuget Package](https://www.nuget.org/packages/IronHook.PostgreSql)
+Install `IronHook.EntityFramework.PostgreSql` from [Nuget Package](https://www.nuget.org/packages/IronHook.PostgreSql)
 
 Initalize `Startup` configuration.
 
 ```csharp
 services.AddIronHook(options =>
 {
-   options.UseNpgsql(Configuration.GetConnectionString("{YOUR_CONNECTION_STRING}"));
+   options.UseNpgsql(
+     Configuration.GetConnectionString("{YOUR_CONNECTION_STRING}"),
+   	 opts => opts.UseIronHookNpgsqlMigrations()
+   );
 });
 ```
 
@@ -58,7 +61,7 @@ after
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-  app.UseIronHook();
+  app.MigrateIronHook();
   // ...
 }
 ```
