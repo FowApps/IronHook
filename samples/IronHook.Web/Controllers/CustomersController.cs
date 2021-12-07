@@ -1,6 +1,5 @@
 ﻿using IronHook.Core.Abstractions;
 using IronHook.Core.Primitives;
-using IronHook.PostgreSql.Context;
 using IronHook.Web.Context;
 using IronHook.Web.Dtos;
 using IronHook.Web.Entities;
@@ -23,7 +22,7 @@ namespace IronHook.Web.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly SampleDbContext sampleDbContext;
-        private readonly IHookService<IronHookPostgreSqlDbContext> hookService;
+        private readonly IHookService hookService;
 
         /// <summary>
         /// Ctor
@@ -34,7 +33,7 @@ namespace IronHook.Web.Controllers
         /// <param name="hookService">
         /// Hook Service
         /// </param>
-        public CustomersController(SampleDbContext sampleDbContext, IHookService<IronHookPostgreSqlDbContext> hookService)
+        public CustomersController(SampleDbContext sampleDbContext, IHookService hookService)
         {
             this.sampleDbContext = sampleDbContext;
             this.hookService = hookService;

@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace IronHook.EntityFrameworkCore
 {
-    public abstract class IronHookCoreDbContext : DbContext, IIronHookContext
+    public class IronHookCoreDbContext : DbContext, IIronHookContext
     {
         protected IronHookCoreDbContext()
         {
         }
 
-        protected IronHookCoreDbContext(DbContextOptions options) : base(options)
+        public IronHookCoreDbContext(DbContextOptions<IronHookCoreDbContext> options) : base(options)
         {
         }
 

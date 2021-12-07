@@ -1,6 +1,5 @@
 ﻿using IronHook.Core.Abstractions;
 using IronHook.Core.Entities;
-using IronHook.PostgreSql.Context;
 using IronHook.Web.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -18,7 +17,7 @@ namespace IronHook.Web.Controllers
     [Route("hooks")]
     public class HookController : ControllerBase
     {
-        private readonly IHookService<IronHookPostgreSqlDbContext> hookService;
+        private readonly IHookService hookService;
 
         /// <summary>
         /// Ctor
@@ -26,7 +25,7 @@ namespace IronHook.Web.Controllers
         /// <param name="hookService">
         /// Hook Operation Service
         /// </param>
-        public HookController(IHookService<IronHookPostgreSqlDbContext> hookService)
+        public HookController(IHookService hookService)
         {
             this.hookService = hookService;
         }

@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace IronHook.Core.Concrete
 {
-    public class DefaultHookService<TDbContext> : IHookService<TDbContext> where TDbContext : IIronHookContext
+    public class DefaultHookService : IHookService
     {
-        private readonly TDbContext dbContext;
+        private readonly IIronHookContext dbContext;
         private readonly IHookOperator hookOperator;
 
-        public DefaultHookService(TDbContext dbContext, IHookOperator hookOperator)
+        public DefaultHookService(IIronHookContext dbContext, IHookOperator hookOperator)
         {
             this.dbContext = dbContext;
             this.hookOperator = hookOperator;

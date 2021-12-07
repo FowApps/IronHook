@@ -1,12 +1,11 @@
-﻿using IronHook.PostgreSql.Context;
+﻿using IronHook.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
+#if !NET5_0
+using Microsoft.Extensions.Hosting;
+#endif
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronHook.PostgreSql.Extensions
 {
@@ -25,14 +24,31 @@ namespace IronHook.PostgreSql.Extensions
         /// <returns>
         /// Application Builder interface
         /// </returns>
-        public static IApplicationBuilder UseIronHook(this IApplicationBuilder app)
+#if NET5_0
+        public static IApplicationBuilder MigrateIronHook(this IApplicationBuilder app)
         {
-            using (var serviceScope = app.ApplicationServices.CreateScope())
+            using var serviceScope = app.ApplicationServices.CreateScope();
+#else
+        public static IHost MigrateIronHook(this IHost app)
+        {
+            using var serviceScope = app.Services.CreateScope();
+#endif
+
+            var context = serviceScope.ServiceProvider.GetService<IronHookCoreDbContext>();
+
+            var pendingMigrations = context.Database.GetPendingMigrations().ToArray();
+
+            if (pendingMigrations.Length > 0)
             {
-                var context = serviceScope.ServiceProvider.GetService<IronHookPostgreSqlDbContext>();
                 context.Database.Migrate();
             }
+            else
+            {
+                context.Database.EnsureCreated();
+            }
+
             return app;
         }
+
     }
 }

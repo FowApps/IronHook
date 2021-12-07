@@ -12,7 +12,7 @@ namespace IronHook.Core.Abstractions
     /// <summary>
     /// This interface includes business endpoints for Hook
     /// </summary>
-    public interface IHookService<TDbContext> where TDbContext : IIronHookContext
+    public interface IHookService
     {
         /// <summary>
         /// Add Hook

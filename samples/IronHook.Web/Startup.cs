@@ -33,7 +33,7 @@ namespace IronHook.Web
 
             services.AddIronHook(options =>
             {
-                options.UseNpgsql(Configuration.GetConnectionString("Default"));
+                options.UseNpgsql(Configuration.GetConnectionString("Default"), opts => opts.UseIronHookNpgsqlMigrations());
             });
 
             services.AddDbContext<SampleDbContext>(options =>
@@ -70,7 +70,7 @@ namespace IronHook.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseIronHook();
+            app.MigrateIronHook();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
