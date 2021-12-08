@@ -7,6 +7,6 @@ checks:
         config:
             threshold: 100
 exclude_patterns:
-    - "src/IronHook.EntityFrameworkCore.PostgreSql/Migrations/",
-    - "src/IronHook.EntityFrameworkCore.SqlServer/Migrations/",
+    - "src/IronHook.EntityFrameworkCore.PostgreSql/Migrations/"
+    - "src/IronHook.EntityFrameworkCore.SqlServer/Migrations/"
     - "samples/IronHook.Web/Migrations/"
