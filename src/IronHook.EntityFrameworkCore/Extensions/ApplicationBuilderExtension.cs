@@ -49,6 +49,5 @@ namespace IronHook.PostgreSql.Extensions
 
             return app;
         }
-
     }
 }
