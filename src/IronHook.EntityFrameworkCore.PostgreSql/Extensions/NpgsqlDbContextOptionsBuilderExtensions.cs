@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class DbContextBuilderExtensions
+    public static class NpgsqlDbContextOptionsBuilderExtensions
     {
         public static NpgsqlDbContextOptionsBuilder UseIronHookNpgsqlMigrations(this NpgsqlDbContextOptionsBuilder builder)
         {

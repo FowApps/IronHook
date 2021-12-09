@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class DbContextBuilderExtensions
+    public static class SqlServerDbContextOptionsBuilderExtensions
     {
         public static SqlServerDbContextOptionsBuilder UseIronHookSqlServerMigrations(this SqlServerDbContextOptionsBuilder builder)
         {
