@@ -10,3 +10,4 @@ exclude_patterns:
     - "src/IronHook.EntityFrameworkCore.PostgreSql/Migrations/"
     - "src/IronHook.EntityFrameworkCore.SqlServer/Migrations/"
     - "samples/IronHook.Web/Migrations/"
+    - "samples/dotnet6/IronHook.Web" # Exact clone of IronHook.Web
