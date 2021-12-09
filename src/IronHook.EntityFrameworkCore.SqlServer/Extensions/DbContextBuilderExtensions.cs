@@ -6,7 +6,7 @@ namespace IronHook.EntityFrameworkCore.SqlServer.Extensions
     {
         public static SqlServerDbContextOptionsBuilder UseIronHookSqlServerMigrations(this SqlServerDbContextOptionsBuilder builder)
         {
-            builder.MigrationsAssembly(typeof(IronHookCoreDbContextFactory).Assembly.FullName);
+            builder.MigrationsAssembly(typeof(IronHookCoreDbContextSqlServerFactory).Assembly.FullName);
 
             return builder;
         }

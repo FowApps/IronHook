@@ -8,7 +8,7 @@ namespace IronHook.EntityFrameworkCore.PostgreSql.Extensions
     {
         public static NpgsqlDbContextOptionsBuilder UseIronHookNpgsqlMigrations(this NpgsqlDbContextOptionsBuilder builder)
         {
-            builder.MigrationsAssembly(typeof(IronHookCoreDbContextFactory).Assembly.FullName);
+            builder.MigrationsAssembly(typeof(IronHookCoreDbContextPostgreSqlFactory).Assembly.FullName);
 
             return builder;
         }
