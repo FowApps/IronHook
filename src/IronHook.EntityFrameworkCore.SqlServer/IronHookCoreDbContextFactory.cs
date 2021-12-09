@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace IronHook.EntityFrameworkCore.SqlServer
 {
-    public class IronHookCoreDbContextFactory : IDesignTimeDbContextFactory<IronHookCoreDbContext>
+    public class IronHookCoreDbContextSqlServerFactory : IDesignTimeDbContextFactory<IronHookCoreDbContext>
     {
         public IronHookCoreDbContext CreateDbContext(string[] args)
         {

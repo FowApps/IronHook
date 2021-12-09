@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IronHook.PostgreSql
 {
-    public class IronHookCoreDbContextFactory : IDesignTimeDbContextFactory<IronHookCoreDbContext>
+    public class IronHookCoreDbContextPostgreSqlFactory : IDesignTimeDbContextFactory<IronHookCoreDbContext>
     {
         public IronHookCoreDbContext CreateDbContext(string[] args)
         {
