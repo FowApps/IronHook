@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +9,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddIronHook(opts =>
+{
+    opts.UseNpgsql(
+        builder.Configuration.GetConnectionString("Default"),
+        opts =>opts.UseIronHookNpgsqlMigrations()
+        );
+});
+
 var app = builder.Build();
+
+app.MigrateIronHook();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
