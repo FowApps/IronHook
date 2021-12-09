@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
-namespace IronHook.EntityFrameworkCore.PostgreSql.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class DbContextBuilderExtensions
     {

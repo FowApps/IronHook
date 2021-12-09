@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace IronHook.PostgreSql.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// This class includes IServiceCollection extensions

@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+﻿using IronHook.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace IronHook.EntityFrameworkCore.SqlServer.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class DbContextBuilderExtensions
     {

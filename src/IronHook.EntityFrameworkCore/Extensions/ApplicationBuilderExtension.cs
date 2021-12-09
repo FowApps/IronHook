@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 #endif
 using System.Linq;
 
-namespace IronHook.PostgreSql.Extensions
+namespace Microsoft.AspNetCore.Builder
 {
     /// <summary>
     /// This class includes Application Builder extensions for database migrations.
