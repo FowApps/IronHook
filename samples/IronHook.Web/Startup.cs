@@ -1,5 +1,3 @@
-using IronHook.EntityFrameworkCore.PostgreSql.Extensions;
-using IronHook.PostgreSql.Extensions;
 using IronHook.Web.Context;
 using MarkdownDocumenting.Extensions;
 using Microsoft.AspNetCore.Builder;
