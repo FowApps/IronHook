@@ -27,11 +27,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj" />
+    <None Include="anchor.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="anchor.png" />
+    <ProjectReference Include="..\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

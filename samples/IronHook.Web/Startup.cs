@@ -1,3 +1,4 @@
+using IronHook.EntityFrameworkCore.Extensions;
 using IronHook.Web.Context;
 using MarkdownDocumenting.Extensions;
 using Microsoft.AspNetCore.Builder;

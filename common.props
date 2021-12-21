@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<Version>1.0.0</Version>
+		<Version>2.0.0</Version>
 		<LangVersion>latest</LangVersion>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<RepositoryUrl>https://github.com/FowApps/IronHook</RepositoryUrl>

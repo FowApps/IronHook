@@ -23,7 +23,7 @@ namespace IronHook.Core.Concrete
         public virtual async Task<Hook> AddAsync(Hook hook)
         {
             var response = await dbContext.InsertAsync<Hook>(hook);
-            foreach (var request in hook.HookRequests.ToList())
+            foreach (var request in hook?.HookRequests?.ToList() ?? new List<HookRequest>())
             {
                 request.HookId = response.Id;
                 await dbContext.InsertAsync<HookRequest>(request);

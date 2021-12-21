@@ -1,6 +1,5 @@
 ﻿using IronHook.EntityFrameworkCore;
 using IronHook.PostgreSql;
-using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
 namespace Microsoft.Extensions.DependencyInjection
