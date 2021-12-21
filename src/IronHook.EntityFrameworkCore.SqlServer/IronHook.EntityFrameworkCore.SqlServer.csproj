@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
-    <PackageId>IronHook.PostgreSql</PackageId>
+    <PackageId>IronHook.SqlServer</PackageId>
     <PackageIcon>anchor.png</PackageIcon>
     <Company>fowapps</Company>
     <PackageIconUrl />
