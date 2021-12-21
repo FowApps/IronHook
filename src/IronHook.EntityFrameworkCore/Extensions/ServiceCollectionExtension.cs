@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace IronHook.EntityFrameworkCore.Extensions
 {
     /// <summary>
     /// This class includes IServiceCollection extensions

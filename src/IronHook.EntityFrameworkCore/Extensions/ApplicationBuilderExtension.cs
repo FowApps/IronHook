@@ -1,5 +1,7 @@
 ﻿using IronHook.EntityFrameworkCore;
+#if NET5_0
 using Microsoft.AspNetCore.Builder;
+#endif
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 #if !NET5_0
@@ -7,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 #endif
 using System.Linq;
 
-namespace Microsoft.AspNetCore.Builder
+namespace IronHook.EntityFrameworkCore.Extensions
 {
     /// <summary>
     /// This class includes Application Builder extensions for database migrations.
