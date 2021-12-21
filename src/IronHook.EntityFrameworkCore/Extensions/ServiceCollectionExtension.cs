@@ -1,15 +1,11 @@
 ﻿using IronHook.Core.Abstractions;
 using IronHook.Core.Concrete;
-using IronHook.PostgreSql.Context;
+using IronHook.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace IronHook.PostgreSql.Extensions
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// This class includes IServiceCollection extensions
@@ -30,9 +26,9 @@ namespace IronHook.PostgreSql.Extensions
         /// </returns>
         public static IServiceCollection AddIronHook(this IServiceCollection services, Action<DbContextOptionsBuilder> options)
         {
-            services.AddDbContext<IronHookPostgreSqlDbContext>(options, ServiceLifetime.Transient, ServiceLifetime.Transient);
-            services.AddTransient<IIronHookContext>(sp => sp.GetService<IronHookPostgreSqlDbContext>());
-            services.AddTransient<IHookService<IronHookPostgreSqlDbContext>, DefaultHookService<IronHookPostgreSqlDbContext>>();
+            services.AddDbContext<IronHookCoreDbContext>(options, ServiceLifetime.Transient, ServiceLifetime.Transient);
+            services.AddTransient<IIronHookContext>(sp => sp.GetService<IronHookCoreDbContext>());
+            services.AddTransient<IHookService, DefaultHookService>();
             services.AddTransient<IHookOperator, HttpHookOperator>();
             return services;
         }

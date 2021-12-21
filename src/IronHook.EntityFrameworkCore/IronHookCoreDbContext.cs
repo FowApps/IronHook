@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace IronHook.EntityFrameworkCore
 {
-    public abstract class IronHookCoreDbContext : DbContext, IIronHookContext
+    public class IronHookCoreDbContext : DbContext, IIronHookContext
     {
         protected IronHookCoreDbContext()
         {
         }
 
-        protected IronHookCoreDbContext(DbContextOptions options) : base(options)
+        public IronHookCoreDbContext(DbContextOptions<IronHookCoreDbContext> options) : base(options)
         {
         }
 
@@ -36,7 +36,7 @@ namespace IronHook.EntityFrameworkCore
             modelBuilder.Entity<Hook>(entity =>
             {
                 entity
-                    .ToTable(nameof(Hooks), "iron-hook");
+                    .ToTable(nameof(Hooks), IronHookConsts.DatabaseScheme);
 
                 entity
                     .HasKey(pk => pk.Id);
@@ -74,7 +74,7 @@ namespace IronHook.EntityFrameworkCore
             modelBuilder.Entity<HookRequest>(entity =>
             {
                 entity
-                    .ToTable(nameof(HookRequests), "iron-hook");
+                    .ToTable(nameof(HookRequests), IronHookConsts.DatabaseScheme);
 
                 entity
                     .HasKey(pk => pk.Id);
@@ -115,7 +115,7 @@ namespace IronHook.EntityFrameworkCore
             modelBuilder.Entity<HookLog>(entity =>
             {
                 entity
-                    .ToTable(nameof(HookLogs), "iron-hook");
+                    .ToTable(nameof(HookLogs), IronHookConsts.DatabaseScheme);
 
                 entity
                     .HasKey(pk => pk.Id);

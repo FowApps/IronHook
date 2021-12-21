@@ -13,9 +13,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 	</PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\IronHook.PostgreSql\IronHook.PostgreSql.csproj" />
-  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.3.0" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
@@ -24,6 +21,9 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\IronHook.EntityFrameworkCore.PostgreSql\IronHook.EntityFrameworkCore.PostgreSql.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="Docs\PostgreSql\Step3.md">

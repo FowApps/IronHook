@@ -1,19 +1,14 @@
-using IronHook.PostgreSql.Extensions;
 using IronHook.Web.Context;
 using MarkdownDocumenting.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace IronHook.Web
 {
@@ -33,7 +28,7 @@ namespace IronHook.Web
 
             services.AddIronHook(options =>
             {
-                options.UseNpgsql(Configuration.GetConnectionString("Default"));
+                options.UseNpgsql(Configuration.GetConnectionString("Default"), opts => opts.UseIronHookNpgsqlMigrations());
             });
 
             services.AddDbContext<SampleDbContext>(options =>
@@ -70,7 +65,7 @@ namespace IronHook.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseIronHook();
+            app.MigrateIronHook();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

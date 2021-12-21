@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace IronHook.PostgreSql.Migrations
 {
     public partial class Initial : Migration
@@ -19,8 +21,8 @@ namespace IronHook.PostgreSql.Migrations
                     TenantId = table.Column<string>(type: "text", nullable: true),
                     Key = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
@@ -41,8 +43,8 @@ namespace IronHook.PostgreSql.Migrations
                     Headers = table.Column<string>(type: "text", nullable: true),
                     MaxRetryCount = table.Column<int>(type: "integer", nullable: false),
                     NotifiyEmail = table.Column<string>(type: "text", nullable: true),
-                    CreateDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdateDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
@@ -67,8 +69,8 @@ namespace IronHook.PostgreSql.Migrations
                     RequestId = table.Column<Guid>(type: "uuid", nullable: false),
                     Request = table.Column<string>(type: "text", nullable: true),
                     Response = table.Column<string>(type: "text", nullable: true),
-                    RequestDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    ResponseDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    RequestDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ResponseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
