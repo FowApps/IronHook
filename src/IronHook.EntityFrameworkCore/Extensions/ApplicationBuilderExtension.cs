@@ -1,5 +1,7 @@
 ﻿using IronHook.EntityFrameworkCore;
+#if NET5_0
 using Microsoft.AspNetCore.Builder;
+#endif
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 #if !NET5_0
