@@ -77,7 +77,7 @@ Visit [Wiki](https://github.com/FowApps/IronHook/wiki) page for documentation.
 
 ***
 ### Demo
-Visit [Live Demo](https://iron-hook.herokuapp.com) for sample project.
+Visit [Live Demo](https://iron-hook.herokuapp.com/swagger/index.html) for sample project.
 
 
 ## Contributors ✨
