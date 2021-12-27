@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY common.props ./
 COPY ["samples/IronHook.Web/IronHook.Web.csproj", "samples/IronHook.Web/"]
-COPY ["src/IronHook.PostgreSql/IronHook.PostgreSql.csproj", "src/IronHook.PostgreSql/"]
+COPY ["src/IronHook.EntityFrameworkCore.PostgreSql/IronHook.EntityFrameworkCore.PostgreSql.csproj", "src/IronHook.EntityFrameworkCore.PostgreSql/"]
 COPY ["src/IronHook.EntityFrameworkCore/IronHook.EntityFrameworkCore.csproj", "src/IronHook.EntityFrameworkCore/"]
 COPY ["src/IronHook.Core/IronHook.Core.csproj", "src/IronHook.Core/"]
 RUN dotnet restore "samples/IronHook.Web/IronHook.Web.csproj"
