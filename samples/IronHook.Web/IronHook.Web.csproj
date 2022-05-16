@@ -15,15 +15,13 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.3.0" />
+		<PackageReference Include="IronHook.PostgreSql" Version="2.0.0" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-	</ItemGroup>
-	<ItemGroup>
-	  <ProjectReference Include="..\..\src\IronHook.EntityFrameworkCore.PostgreSql\IronHook.EntityFrameworkCore.PostgreSql.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="Docs\PostgreSql\Step3.md">
