@@ -1,8 +1,7 @@
 ﻿using IronHook.EntityFrameworkCore;
-using IronHook.PostgreSql;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace IronHook.EntityFrameworkCore.PostgreSql.Extensions
 {
     public static class NpgsqlDbContextOptionsBuilderExtensions
     {

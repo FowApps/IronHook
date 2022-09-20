@@ -2,7 +2,7 @@
 using IronHook.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace IronHook.EntityFrameworkCore.SqlServer.Extensions
 {
     public static class SqlServerDbContextOptionsBuilderExtensions
     {

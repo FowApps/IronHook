@@ -1,4 +1,5 @@
 using IronHook.EntityFrameworkCore.Extensions;
+using IronHook.EntityFrameworkCore.PostgreSql.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
