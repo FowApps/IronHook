@@ -23,6 +23,6 @@ jobs:
       - name: Test with the dotnet CLI
         run: dotnet test --collect:"XPlat Code Coverage" --results-directory ./TestResult
       - run: reportgenerator -reports:./TestResult/*/coverage.cobertura.xml -targetdir:coverage -reporttypes:lcov
-      - uses: paambaati/codeclimate-action@v3.0.0
+      - uses: paambaati/codeclimate-action@v3.1.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID__IRON_HOOK }}
