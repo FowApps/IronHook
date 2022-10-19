@@ -1,19 +1,27 @@
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+
 updates:
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
+    target-branch: "master"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
     commit-message:
       prefix: "⬆️ "
+    assignees:
+      - "sercanuste"
 
   - package-ecosystem: "nuget"
     directory: "/" # Location of package manifests
+    target-branch: "master"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
     commit-message:
       prefix: "⬆️ "
+    ignore:
+        - dependency-name: "*"
+          update-types: ["version-update:semver-patch"]
