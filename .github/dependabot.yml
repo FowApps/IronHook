@@ -11,8 +11,6 @@ updates:
     open-pull-requests-limit: 10
     commit-message:
       prefix: "⬆️ "
-    assignees:
-      - "sercanuste"
 
   - package-ecosystem: "nuget"
     directory: "/" # Location of package manifests
