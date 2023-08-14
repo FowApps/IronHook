@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{33476735-7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.Core", "src\IronHook.Core\IronHook.Core.csproj", "{92BA62A2-B3F9-4897-874A-41C4FA78BF47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.Web", "samples\IronHook.Web\IronHook.Web.csproj", "{DFF10173-23A6-4E76-88AE-0E6900236607}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{228129FA-C2BF-4B64-8B5F-E7DC3B6A2CA8}"
 	ProjectSection(SolutionItems) = preProject
 		.codeclimate.yml = .codeclimate.yml
@@ -30,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet6", "dotnet6", "{CA4A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.Web", "samples\dotnet6\IronHook.Web\IronHook.Web.csproj", "{719956BA-2B70-404C-A8CB-F780623F4178}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronHook.EntityFrameworkCore", "src\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj", "{B50F9623-AEBB-4A3A-8920-370C2AE725B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronHook.EntityFrameworkCore", "src\IronHook.EntityFrameworkCore\IronHook.EntityFrameworkCore.csproj", "{B50F9623-AEBB-4A3A-8920-370C2AE725B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +40,6 @@ Global
 		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BA62A2-B3F9-4897-874A-41C4FA78BF47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFF10173-23A6-4E76-88AE-0E6900236607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFF10173-23A6-4E76-88AE-0E6900236607}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFF10173-23A6-4E76-88AE-0E6900236607}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFF10173-23A6-4E76-88AE-0E6900236607}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19CB6A33-941C-41BC-94A9-5E254F68A787}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,7 +62,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{92BA62A2-B3F9-4897-874A-41C4FA78BF47} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
-		{DFF10173-23A6-4E76-88AE-0E6900236607} = {2550698D-C602-4592-8DEF-C15AF6C6E46F}
 		{19CB6A33-941C-41BC-94A9-5E254F68A787} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
 		{7DB75589-C32C-42E7-B4B5-E140DB21082A} = {B3D9DF87-38B1-4397-A4F5-9F6C45063E1B}
 		{CA4AC978-0A6F-4B86-B805-DFE2F6904DAF} = {2550698D-C602-4592-8DEF-C15AF6C6E46F}

@@ -1,9 +1,9 @@
 ﻿using IronHook.EntityFrameworkCore;
+using IronHook.EntityFrameworkCore.PostgreSql.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace IronHook.PostgreSql
+namespace IronHook.EntityFrameworkCore.PostgreSql
 {
     public class IronHookCoreDbContextPostgreSqlFactory : IDesignTimeDbContextFactory<IronHookCoreDbContext>
     {
