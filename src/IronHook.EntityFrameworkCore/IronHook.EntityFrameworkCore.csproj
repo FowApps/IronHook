@@ -3,7 +3,7 @@
 	<Import Project="..\..\common.props" />
 
 	<PropertyGroup>
-		<TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+		<TargetFramework>net6.0</TargetFramework>
 		<OutputType>Library</OutputType>
 		<PackageId>IronHook.EntityFrameworkCore</PackageId>
 		<PackageIcon>anchor.png</PackageIcon>
@@ -11,15 +11,9 @@
 		<PackageIconUrl />
 	</PropertyGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.8" />
-		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.5" />
 		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
 	</ItemGroup>
 
