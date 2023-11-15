@@ -1,12 +1,6 @@
-﻿using IronHook.EntityFrameworkCore;
-#if NET5_0
-using Microsoft.AspNetCore.Builder;
-#endif
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-#if !NET5_0
 using Microsoft.Extensions.Hosting;
-#endif
 using System.Linq;
 
 namespace IronHook.EntityFrameworkCore.Extensions
@@ -26,15 +20,9 @@ namespace IronHook.EntityFrameworkCore.Extensions
         /// <returns>
         /// Application Builder interface
         /// </returns>
-#if NET5_0
-        public static IApplicationBuilder MigrateIronHook(this IApplicationBuilder app)
-        {
-            using var serviceScope = app.ApplicationServices.CreateScope();
-#else
         public static IHost MigrateIronHook(this IHost app)
         {
             using var serviceScope = app.Services.CreateScope();
-#endif
 
             var context = serviceScope.ServiceProvider.GetService<IronHookCoreDbContext>();
 
